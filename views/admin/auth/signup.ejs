@@ -1,0 +1,21 @@
+<%- include('../../partials/admin/header') %> 
+
+<div>
+    <form method="POST">
+        <input type="text" name="email" placeholder="email">
+        <% if(err){ %> 
+            <%= getError(err, 'email') %>
+        <% } %>
+        <input type="password" name="password" placeholder="password">
+        <% if(err){ %> 
+            <%= getError(err, 'password') %>
+        <% } %>
+        <input type="password" name="passwordConfirmation" placeholder="password confirmation">
+        <% if(err){ %> 
+            <%= getError(err, 'passwordConfirmation') %>
+        <% } %>
+        <button>Sign Up</button>
+    </form>
+</div>
+
+<%- include('../../partials/admin/footer') %> 
